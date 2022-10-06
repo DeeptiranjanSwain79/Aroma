@@ -1,0 +1,111 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+#navbar ul{
+    padding: 1vmax 2vmax;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+#navbar li{
+    list-style: none;    
+    font-family: 'Libre Baskerville', serif;
+    font-size: large;
+}
+
+#navbar li a{
+    text-decoration: none;
+    padding: 2vmax;
+    color: whitesmoke;
+}
+
+#navbar li a:hover{
+    color: #cfe031;
+}
+
+#introSection{
+    background: center/contain no-repeat  url('/image/bg.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d31010;
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 300px;
+    background-color: #7f8a1a;
+    
+}
+
+#introSection div.mid{
+    font-size: 1.5rem;
+}
+
+#ourMission{
+    height: 20vmax;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ourMission img{
+    height: 15vmax;
+}
+
+
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vmax;
+    background-color: navy;
+    color: white;
+    font-size: 2vmax;
+    border: 2px solid cyan;
+}
+
+.card{
+    padding: 20px 75px;
+}
+
+
+#sponsersSection{
+    height: 300px;
+    background-color: #b91111;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sponser{
+    margin: 30px 25px;
+}
+
+img{
+    height: 250px;
+}
+
+#footer{
+    height: 50px;
+    background-color: #06061f;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

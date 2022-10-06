@@ -1,0 +1,58 @@
+h2{
+    text-align: center;
+    margin: 15px 0;
+    font:800 2vmax "Cursive";
+}
+
+.container{
+    background: center/cover no-repeat  url('/image/contact.jpg');
+    height: 85%;
+    background-color: #ff00ea;
+}
+.form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+}
+
+body{
+    height: 100vh;
+}
+
+.myInput{
+    text-align: center;
+    background-color: black;
+    border: 2px solid green;
+    margin: 5px;
+    padding: 1vmax 10vmax;
+    border-radius: 19px;
+    color: yellow;
+    font-family: 'Libre Baskerville';
+    font-size: large;
+}
+.button{
+    width: 30%;
+    height: 4vmax;
+    background-color: rgb(8, 224, 8);
+    color: rgb(100, 24, 24);
+    font-weight: bold;
+    border-radius: 17px;
+    cursor:pointer;
+    font-size: 2vmax;
+}
+
+
+/* To remove the arrow mark from number inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

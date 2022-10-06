@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleContact.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="/contact.php">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form class="form">
+            <input type="text" class="myInput" id="name" placeholder="Enter Your Name">
+            <input type="number" class="myInput" id="age" placeholder="Enter Your Age">
+            <input type="text" class="myInput" id="aadhaar" placeholder="Enter Your AADHAAR Number">
+            <input type="email" class="myInput" id="email" placeholder="Enter Your E-mail ID">
+            <input type="text" class="myInput" id="phone" placeholder="Phone">
+            <button class="button" type="button" id="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer id="footer">
+        <div class="foot">
+            Copyright &copy; DEEPTIRANJAN SWAIN | All rights reserved
+        </div>
+    </footer>
+</body>
+
+<script>
+    document.getElementById("submit").addEventListener("click", function (e) {
+
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var aadhaar = document.getElementById("aadhaar").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+
+        //Creating CSV file data in an array
+        const csvData = [
+            [`${name}`, `${age}`, `${aadhaar}`, `${email}`, `${phone}`]
+        ];
+
+        console.log(csvData);
+        //Defining heading for each row of the data
+        var csv = "Name,Age,Aadhaar,E-mail ID,Phone";
+
+        //merge the heading with the csv data
+        csvData.forEach(function (row) {
+            csv += "\n";
+            csv += row.join(',');
+        })
+
+
+        //display the created csv file on the browser
+        document.write(csv);
+
+        var newElement = document.createElement('a');
+        newElement.display = "none"
+        newElement.className = "button";
+        newElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+        newElement.target = '_blank';
+
+        //provide the name for the CSV file to be downloaded  
+        newElement.download = 'Personal Data.csv';
+        newElement.click();
+    });
+</script>
+
+</html>
